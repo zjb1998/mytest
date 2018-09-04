@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			* { margin: 0; padding: 0; box-sizing: border-box;}
+			body { font-size: 0.16rem;}
+			header { background: #ff5353; height: 0.82rem;}
+			header > div { float: left;}
+			.message { width: 1rem;height: 0.82rem; background: url(images/yin.gif) no-repeat center;
+				background-size: 0.4rem;
+			}
+			.search { width: 5.2rem; height: 0.62rem;
+			 border: 1px solid #ff5f5f; border-radius: 6px;
+			 background: #e13e3f; margin: 0.1rem 0.1rem 0 0.2rem;}
+			 .search input { line-height: 0.6rem; background: none; border:none;
+			 color: #fff; padding-left: 0.15rem; width: 5rem;
+			 font-size: 0.26rem;}
+			 .sys {
+			 	 width: 1rem;height: 0.82rem; background: url(images/sao.gif) no-repeat center;
+			 	background-size: 0.4rem;
+			 }
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="message">
+			</div>
+			<div class="search">
+				<input type="text" value="请输入商品、商家、服务" />
+			</div>
+			<div class="sys">
+			</div>
+		</header>
+		
+		<script type="text/javascript">
+//			$("html").css("font-size",///)
+//			$("html").width()
+			function rem(){
+				var html = document.documentElement;//获取html
+				var w = html.offsetWidth; //html元素自身的宽度
+				html.style.fontSize = 100/750*w + "px";
+				console.log(100/750*w)
+			}
+			rem()
+			window.onresize = rem;
+		</script>
+	</body>
+</html>
